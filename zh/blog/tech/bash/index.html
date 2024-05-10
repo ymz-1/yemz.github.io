@@ -5,22 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Windows 11 打造个性化终端 | Kunyang&#39;s Blog</title>
+<title>Windows 11 打造个性化终端 | Yemz&#39;s Blog</title>
 <meta name="keywords" content="终端">
 <meta name="description" content="前言 我就喜欢搞一些简洁而又花里胡哨的东西。 教程基于Windows 11自带的Terminal。 字体 我使用的字体是CodeNewRoman Nerd Fo">
 <meta name="author" content="Kyrie">
-<link rel="canonical" href="https://kyxie.github.io/zh/blog/tech/bash/">
+<link rel="canonical" href="https://ymz-1.github.io/zh/blog/tech/bash/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5fba7659f49a2f7ca0ce86b7611a869462aadd4a57aa486975cf60e413fa7b0f.css" integrity="sha256-X7p2WfSaL3ygzoa3YRqGlGKq3UpXqkhpdc9g5BP6ew8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.f61a30837a1dd79c8e15931b0916e2469274f1900212a78e5fcc9b3d40026a16.js" integrity="sha256-9howg3od15yOFZMbCRbiRpJ08ZACEqeOX8ybPUACahY="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://kyxie.github.io/White.png">
-<link rel="apple-touch-icon" href="https://kyxie.github.io/White.png">
-<link rel="mask-icon" href="https://kyxie.github.io/White.png">
+<link rel="icon" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ymz-1.github.io/White.png">
+<link rel="apple-touch-icon" href="https://ymz-1.github.io/White.png">
+<link rel="mask-icon" href="https://ymz-1.github.io/White.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://kyxie.github.io/zh/blog/tech/bash/">
+<link rel="alternate" hreflang="zh" href="https://ymz-1.github.io/zh/blog/tech/bash/">
 <noscript>
     <style>
         #theme-toggle,
@@ -47,9 +47,9 @@
 <link href="https://fonts.cdnfonts.com/css/code-new-roman" rel="stylesheet"><meta property="og:title" content="Windows 11 打造个性化终端" />
 <meta property="og:description" content="前言 我就喜欢搞一些简洁而又花里胡哨的东西。 教程基于Windows 11自带的Terminal。 字体 我使用的字体是CodeNewRoman Nerd Fo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyxie.github.io/zh/blog/tech/bash/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2023-04-01T00:07:17-04:00" />
-<meta property="article:modified_time" content="2023-04-01T00:07:17-04:00" /><meta property="og:site_name" content="Kyrie" />
+<meta property="og:url" content="https://ymz-1.github.io/zh/blog/tech/bash/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-05-10T00:07:17-04:00" />
+<meta property="article:modified_time" content="2024-05-10T00:07:17-04:00" /><meta property="og:site_name" content="Kyrie" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows 11 打造个性化终端"/>
@@ -65,19 +65,19 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "博客 📒",
-      "item": "https://kyxie.github.io/zh/blog/"
+      "item": "https://ymz-1.github.io/zh/blog/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "技术 🔧",
-      "item": "https://kyxie.github.io/zh/blog/tech/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "Windows 11 打造个性化终端",
-      "item": "https://kyxie.github.io/zh/blog/tech/bash/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/bash/"
     }
   ]
 }
@@ -95,22 +95,22 @@
   "articleBody": "前言 我就喜欢搞一些简洁而又花里胡哨的东西。\n教程基于Windows 11自带的Terminal。\n字体 我使用的字体是CodeNewRoman Nerd Font，这个字体同样是我博客的字体，可以从这里下载，下载后安装即可，也可以在VS Code上使用这个字体。\n下载 oh-my-posh winget install JanDeDobbeleer.OhMyPosh 终端设置 我这里直接修改了Windows PowerShell的配置，如果不想破坏默认的配置也可以新建一个配置文件。\n在配色方案的选项下，我选择的Campbell，但是我打开设置的json file里面把第一个主题的background改成了#0C0C0C，避免了纯黑的背景。\n在Windows PowerShell的常规选项下，取消勾选使用父进程目录，在外观选项下选取下载的字体CodeNowRoman Nerd Font。\n文件配置 在终端输入\necho $profile 找到这个文件，如果找不到自己新建一个。\n从这里选择一个自己喜欢的主题，点击主题名字进入相应的github并且下载.json源码，保存在本地，粘贴下面语句到这个文件中，修改路径为你保存的路径。\noh-my-posh init pwsh --config 'C:/Users/Posh/jandedobbeleer.omp.json' | Invoke-Expression 保存后运行：\n. $profile FAQ 如果运行失败，可能需要更新PSReadLine。\n如果识别不了icon，大概率字体的问题，查看是否在PowerShell的页面下设置字体为Nerd字体。\n效果展示 ",
   "wordCount" : "529",
   "inLanguage": "zh",
-  "datePublished": "2023-04-01T00:07:17-04:00",
-  "dateModified": "2023-04-01T00:07:17-04:00",
+  "datePublished": "2024-05-10T00:07:17-04:00",
+  "dateModified": "2024-05-10T00:07:17-04:00",
   "author":{
     "@type": "Person",
     "name": "Kyrie"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://kyxie.github.io/zh/blog/tech/bash/"
+    "@id": "https://ymz-1.github.io/zh/blog/tech/bash/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Kunyang's Blog",
+    "name": "Yemz's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kyxie.github.io/White.png"
+      "url": "https://ymz-1.github.io/White.png"
     }
   }
 }
@@ -128,7 +128,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kyxie.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
+            <a href="https://ymz-1.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://kyxie.github.io/en/" title="English🇨🇦"
+                        <a href="https://ymz-1.github.io/en/" title="English🇨🇦"
                             aria-label="English🇨🇦">English🇨🇦</a>
                     </li>
                 </ul>
@@ -160,32 +160,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://kyxie.github.io/zh/about" title="关于">
+                <a href="https://ymz-1.github.io/zh/about" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/resume.pdf" title="简历">
+                <a href="https://ymz-1.github.io/zh/resume.pdf" title="简历">
                     <span>简历</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/blog" title="博客">
+                <a href="https://ymz-1.github.io/zh/blog" title="博客">
                     <span>博客</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/comment/comments" title="留言板">
+                <a href="https://ymz-1.github.io/zh/comment/comments" title="留言板">
                     <span>留言板</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/links" title="友链">
+                <a href="https://ymz-1.github.io/zh/links" title="友链">
                     <span>友链</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://ymz-1.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
@@ -196,11 +196,11 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://kyxie.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/tech/">技术 🔧</a></div>
+    <div class="breadcrumbs"><a href="https://ymz-1.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/tech/">技术 🔧</a></div>
     <h1 class="post-title">
       Windows 11 打造个性化终端
     </h1>
-    <div class="post-meta"><span title='2023-04-01 00:07:17 -0400 EDT'>2023-04-01</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Kyrie
+    <div class="post-meta"><span title='2024-05-10 00:07:17 -0400 EDT'>2024-05-10</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Kyrie
 
 </div>
   </header> <aside id="toc-container" class="toc-container wide">
@@ -327,12 +327,12 @@
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="https://kyxie.github.io/zh/blog/tech/samba/">
+  <a class="prev" href="https://ymz-1.github.io/zh/blog/tech/samba/">
     <span class="title">« 上一页</span>
     <br>
     <span>使用Samba将Linux映射为Windows磁盘</span>
   </a>
-  <a class="next" href="https://kyxie.github.io/zh/blog/tech/java/">
+  <a class="next" href="https://ymz-1.github.io/zh/blog/tech/java/">
     <span class="title">下一页 »</span>
     <br>
     <span>Java Cheat Sheet</span>
@@ -352,7 +352,7 @@
     <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.10/dist/twikoo.all.min.js"></script>
     <script>
         twikoo.init({
-            envId: "https://twikoo-kyxie.vercel.app/",  
+            envId: "https://twikoo-ymz-1.vercel.app/",  
             el: "#tcomment",
             lang: 'en-US',
             region: '',  
@@ -364,7 +364,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://kyxie.github.io/zh/">Kunyang&#39;s Blog</a></span>
+    <span>&copy; 2024 <a href="https://ymz-1.github.io/zh/">Yemz&#39;s Blog</a></span>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
