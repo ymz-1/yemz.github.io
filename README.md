@@ -1,3 +1,3 @@
 ## My Personal Website
 
-Here to view: [Kyrie Xie (kyxie.github.io)](https://kyxie.github.io/en/)
+Here to view: [Yemz (ymz-1.github.io)](https://ymz-1.github.io/en/)
