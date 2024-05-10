@@ -5,22 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Linux配置OpenVPN | Kunyang&#39;s Blog</title>
+<title>Linux配置OpenVPN | Yemz&#39;s Blog</title>
 <meta name="keywords" content="Linux, OpenVPN">
 <meta name="description" content="Server 下载OpenVPN sudo apt-get install openvpn 在/usr/share/doc/openvpn/examples/sample-keys/文件夹下有好多keys">
-<meta name="author" content="Kyrie">
-<link rel="canonical" href="https://kyxie.github.io/zh/blog/tech/openvpn/">
+<meta name="author" content="Yemz">
+<link rel="canonical" href="https://ymz-1.github.io/zh/blog/tech/openvpn/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5fba7659f49a2f7ca0ce86b7611a869462aadd4a57aa486975cf60e413fa7b0f.css" integrity="sha256-X7p2WfSaL3ygzoa3YRqGlGKq3UpXqkhpdc9g5BP6ew8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.f61a30837a1dd79c8e15931b0916e2469274f1900212a78e5fcc9b3d40026a16.js" integrity="sha256-9howg3od15yOFZMbCRbiRpJ08ZACEqeOX8ybPUACahY="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://kyxie.github.io/White.png">
-<link rel="apple-touch-icon" href="https://kyxie.github.io/White.png">
-<link rel="mask-icon" href="https://kyxie.github.io/White.png">
+<link rel="icon" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ymz-1.github.io/White.png">
+<link rel="apple-touch-icon" href="https://ymz-1.github.io/White.png">
+<link rel="mask-icon" href="https://ymz-1.github.io/White.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://kyxie.github.io/zh/blog/tech/openvpn/">
+<link rel="alternate" hreflang="zh" href="https://ymz-1.github.io/zh/blog/tech/openvpn/">
 <noscript>
     <style>
         #theme-toggle,
@@ -47,9 +47,9 @@
 <link href="https://fonts.cdnfonts.com/css/code-new-roman" rel="stylesheet"><meta property="og:title" content="Linux配置OpenVPN" />
 <meta property="og:description" content="Server 下载OpenVPN sudo apt-get install openvpn 在/usr/share/doc/openvpn/examples/sample-keys/文件夹下有好多keys" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyxie.github.io/zh/blog/tech/openvpn/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2024-04-26T20:38:19-04:00" />
-<meta property="article:modified_time" content="2024-04-26T20:38:19-04:00" /><meta property="og:site_name" content="Kyrie" />
+<meta property="og:url" content="https://ymz-1.github.io/zh/blog/tech/openvpn/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-05-10T20:38:19-04:00" />
+<meta property="article:modified_time" content="2024-05-10T20:38:19-04:00" /><meta property="og:site_name" content="Yemz" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux配置OpenVPN"/>
@@ -65,19 +65,19 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "博客 📒",
-      "item": "https://kyxie.github.io/zh/blog/"
+      "item": "https://ymz-1.github.io/zh/blog/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "技术 🔧",
-      "item": "https://kyxie.github.io/zh/blog/tech/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "Linux配置OpenVPN",
-      "item": "https://kyxie.github.io/zh/blog/tech/openvpn/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/openvpn/"
     }
   ]
 }
@@ -95,22 +95,22 @@
   "articleBody": "Server 下载OpenVPN\nsudo apt-get install openvpn 在/usr/share/doc/openvpn/examples/sample-keys/文件夹下有好多keys，在server中，复制ca.crt，server.key，server.crt，dh2048.pem到/etc/openvpn/server\nsudo cp /usr/share/doc/openvpn/examples/sample-keys/{ca.crt,server.key,server.crt,dh2048.pem} /etc/openvpn/server 编写服务器配置文件\nport 1194 proto udp dev tun ca ca.crt cert server.crt key server.key dh dh2048.pem server 10.8.0.0 255.255.255.0 keepalive 10 120 user nobody group nogroup persist-key persist-tun verb 3 启动OpenVPN Server\ncd /etc/openvpn/server sudo openvpn --config server.conf 这时如果查看ip地址可以看到tun0接口，地址是10.8.0.1\nClient 下载OpenVPN\nsudo apt-get install openvpn 从Server上复制对应的ca.crt，client.crt，client.key\nsudo scp username@address:/usr/share/doc/openvpn/examples/sample-keys/{ca.crt,client.crt,client.key} /etc/openvpn/client 编写client.conf\nclient dev tun proto udp remote SERVER_ADDR 1194 ca ca.crt cert client.crt key client.key user nobody group nogroup persist-key persist-tun verb 3 启动OpenVPN Client\ncd /etc/openvpn/client sudo openvpn --config client.conf 这时如果执行\nping 10.8.0.1 成功，说明OpenVPN成功建立\n",
   "wordCount" : "364",
   "inLanguage": "zh",
-  "datePublished": "2024-04-26T20:38:19-04:00",
-  "dateModified": "2024-04-26T20:38:19-04:00",
+  "datePublished": "2024-05-10T20:38:19-04:00",
+  "dateModified": "2024-05-10T20:38:19-04:00",
   "author":{
     "@type": "Person",
-    "name": "Kyrie"
+    "name": "Yemz"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://kyxie.github.io/zh/blog/tech/openvpn/"
+    "@id": "https://ymz-1.github.io/zh/blog/tech/openvpn/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Kunyang's Blog",
+    "name": "Yemz's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kyxie.github.io/White.png"
+      "url": "https://ymz-1.github.io/White.png"
     }
   }
 }
@@ -128,7 +128,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kyxie.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
+            <a href="https://ymz-1.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://kyxie.github.io/en/" title="English🇨🇦"
+                        <a href="https://ymz-1.github.io/en/" title="English🇨🇦"
                             aria-label="English🇨🇦">English🇨🇦</a>
                     </li>
                 </ul>
@@ -160,32 +160,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://kyxie.github.io/zh/about" title="关于">
+                <a href="https://ymz-1.github.io/zh/about" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/resume.pdf" title="简历">
+                <a href="https://ymz-1.github.io/zh/resume.pdf" title="简历">
                     <span>简历</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/blog" title="博客">
+                <a href="https://ymz-1.github.io/zh/blog" title="博客">
                     <span>博客</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/comment/comments" title="留言板">
+                <a href="https://ymz-1.github.io/zh/comment/comments" title="留言板">
                     <span>留言板</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/links" title="友链">
+                <a href="https://ymz-1.github.io/zh/links" title="友链">
                     <span>友链</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://ymz-1.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
@@ -196,11 +196,11 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://kyxie.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/tech/">技术 🔧</a></div>
+    <div class="breadcrumbs"><a href="https://ymz-1.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/tech/">技术 🔧</a></div>
     <h1 class="post-title">
       Linux配置OpenVPN
     </h1>
-    <div class="post-meta"><span title='2024-04-26 20:38:19 -0400 EDT'>2024-04-26</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Kyrie
+    <div class="post-meta"><span title='2024-05-10 20:38:19 -0400 EDT'>2024-05-10</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Yemz
 
 </div>
   </header> <aside id="toc-container" class="toc-container wide">
@@ -358,12 +358,12 @@
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="https://kyxie.github.io/zh/blog/tech/papermod/">
+  <a class="prev" href="https://ymz-1.github.io/zh/blog/tech/papermod/">
     <span class="title">« 上一页</span>
     <br>
     <span>Hugo &#43; PaperMod搭建技术博客</span>
   </a>
-  <a class="next" href="https://kyxie.github.io/zh/blog/tech/keys/">
+  <a class="next" href="https://ymz-1.github.io/zh/blog/tech/keys/">
     <span class="title">下一页 »</span>
     <br>
     <span>使用Keys免密SSH到Linux</span>
@@ -383,7 +383,7 @@
     <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.10/dist/twikoo.all.min.js"></script>
     <script>
         twikoo.init({
-            envId: "https://twikoo-kyxie.vercel.app/",  
+            envId: "https://twikoo-ymz-1.vercel.app/",  
             el: "#tcomment",
             lang: 'en-US',
             region: '',  
@@ -395,7 +395,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://kyxie.github.io/zh/">Kunyang&#39;s Blog</a></span>
+    <span>&copy; 2024 <a href="https://ymz-1.github.io/zh/">Yemz&#39;s Blog</a></span>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
