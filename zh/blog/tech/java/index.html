@@ -5,22 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Java Cheat Sheet | Kunyang&#39;s Blog</title>
+<title>Java Cheat Sheet | Yemz&#39;s Blog</title>
 <meta name="keywords" content="Java">
 <meta name="description" content="Character 判断是否为字母或数字： boolean res = Character.isLetterOrDigit(char); 转小写： char res = Character.toLowerCase(char); 下一个字符： &#39;b&#39; == (char) (&#39;a&#39; &#43; 1); Integer 最大值最小值： int max = Integer.MAX_VALUE; int min = Integer.MIN_VALUE; 比较相等： Integer a = 1; Integer b = 1; a == b; // true">
-<meta name="author" content="Kyrie">
-<link rel="canonical" href="https://kyxie.github.io/zh/blog/tech/java/">
+<meta name="author" content="">
+<link rel="canonical" href="https://ymz-1.github.io/zh/blog/tech/java/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5fba7659f49a2f7ca0ce86b7611a869462aadd4a57aa486975cf60e413fa7b0f.css" integrity="sha256-X7p2WfSaL3ygzoa3YRqGlGKq3UpXqkhpdc9g5BP6ew8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.f61a30837a1dd79c8e15931b0916e2469274f1900212a78e5fcc9b3d40026a16.js" integrity="sha256-9howg3od15yOFZMbCRbiRpJ08ZACEqeOX8ybPUACahY="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://kyxie.github.io/White.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://kyxie.github.io/White.png">
-<link rel="apple-touch-icon" href="https://kyxie.github.io/White.png">
-<link rel="mask-icon" href="https://kyxie.github.io/White.png">
+<link rel="icon" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ymz-1.github.io/White.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ymz-1.github.io/White.png">
+<link rel="apple-touch-icon" href="https://ymz-1.github.io/White.png">
+<link rel="mask-icon" href="https://ymz-1.github.io/White.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://kyxie.github.io/zh/blog/tech/java/">
+<link rel="alternate" hreflang="zh" href="https://ymz-1.github.io/zh/blog/tech/java/">
 <noscript>
     <style>
         #theme-toggle,
@@ -47,9 +47,9 @@
 <link href="https://fonts.cdnfonts.com/css/code-new-roman" rel="stylesheet"><meta property="og:title" content="Java Cheat Sheet" />
 <meta property="og:description" content="Character 判断是否为字母或数字： boolean res = Character.isLetterOrDigit(char); 转小写： char res = Character.toLowerCase(char); 下一个字符： &#39;b&#39; == (char) (&#39;a&#39; &#43; 1); Integer 最大值最小值： int max = Integer.MAX_VALUE; int min = Integer.MIN_VALUE; 比较相等： Integer a = 1; Integer b = 1; a == b; // true" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyxie.github.io/zh/blog/tech/java/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2022-05-05T17:28:17-04:00" />
-<meta property="article:modified_time" content="2022-05-05T17:28:17-04:00" /><meta property="og:site_name" content="Kyrie" />
+<meta property="og:url" content="https://ymz-1.github.io/zh/blog/tech/java/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-05-10T22:28:17-04:00" />
+<meta property="article:modified_time" content="2024-05-10T22:28:17-04:00" /><meta property="og:site_name" content="" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java Cheat Sheet"/>
@@ -65,19 +65,19 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "博客 📒",
-      "item": "https://kyxie.github.io/zh/blog/"
+      "item": "https://ymz-1.github.io/zh/blog/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "技术 🔧",
-      "item": "https://kyxie.github.io/zh/blog/tech/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "Java Cheat Sheet",
-      "item": "https://kyxie.github.io/zh/blog/tech/java/"
+      "item": "https://ymz-1.github.io/zh/blog/tech/java/"
     }
   ]
 }
@@ -95,22 +95,22 @@
   "articleBody": "Character 判断是否为字母或数字：\nboolean res = Character.isLetterOrDigit(char); 转小写：\nchar res = Character.toLowerCase(char); 下一个字符：\n'b' == (char) ('a' + 1); Integer 最大值最小值：\nint max = Integer.MAX_VALUE; int min = Integer.MIN_VALUE; 比较相等：\nInteger a = 1; Integer b = 1; a == b;\t// true Integer c = 200; Integer d = 200; c == d;\t// false Objects.equals(c, d);\t// true Array 创建数组：\nint[] array = new int[5]; int[] array = new int[]{1,2,3,4}; int[] array = {1,2,3,4}; int[][] array = {{1,2}, {3,4}}; 引用：\narray[3]; 获取长度：\narray.length; 排序：\nArrays.sort(array); // int[] 不能直接做降序排列 // 想做降序排列只能用Integer[] Integer[] array = new Integer[2]; Arrays.sort(array, Comparitor.naturalOrder());\t// 升序排列 Arrays.sort(array, Comparator.reverseOrder());\t// 降序排列 二维数组排序：\nint[][] array = new int[][]{{1, 2}, {2, 3}}; Arrays.sort(array, (o1, o2) -\u003e o1[0] - o2[0]);\t// 按照二维数组的第一个元素从小到大排序 Arrays.sort(array, (o1, o2) -\u003e o1[1] - o2[1]);\t// 按照二维数组的第二个元素从小到大排序 打印：\nSystem.out.println(Arrays.toString(array)); 填满：\nint[] array = new int[]; int num; Arrays.fill(array, num);\t// array全部元素等于num String 创建字符串：\nString string = \"java\"; 指定位置的字符\nchar charAt3 = string.charAt(3);\t// charAt3 = 'a' 字符串相等：\nString string1 = \"abc\"; String string2 = \"abc\"; string1.equals(string2); 字符串转整数：\nString string = \"123\"; int integer = Integer.parseInt(string); 字符串长度：\nint length = string.length(); 截取字符串：\nString sb = \"abcdef\"; String str = sb.substring(0, 1);\t// str = \"a\"; String str = sb.substring(1);\t// str = \"bcdef\";\t如果只有一个参数则为beginIndex 字符的位置：\nString str = \"abc\"; int index = str.indexOf(b);\t// index = 1 字符串转字符数组：\nString str; char[] temp = str.toCharArray(); 字符串分割：\nString str = \"hello world\"; String[] word = str.split(\" \");\t// word = [\"hello\", \"world\"] // 这里必须是字符串 // 如果有两个空格连在一起，会在数组中加入一个\"\"（空字符串） 将字符串数组合并为长字符串（中间插入）：\nString[] words = new String[]{\"hello\", \"world\"}; String str = String.join(\" \", words); // str = \"hello world\"; 字符串替换：\nString str = \"a! b\"; str = str.replace(\"!\", \" \");\t// str = \"a b\"; // 字符或者字符串都可以替换 删除字符串头尾的空格：\nString str = \" abc \"; str.trim();\t// str = \"abc\" 字符串拼接：\nString str = \"abc\"; System.out.println(str + \"def\");\t// 可以直接使用+ Stack 创建 stack：\nDeque\u003cInteger\u003e stack = new ArrayDeque\u003cInteger\u003e(); 栈顶：\nstack.peek() 入栈：\nstack.push(); 出栈：\nstack.pop(); 栈是否为空：\nstack.isEmpty(); 栈的长度：\nstack.size(); ArrayList 创建列表：\nList\u003cInteger\u003e array = new ArrayList\u003cInteger\u003e(); List\u003cInteger\u003e array = new ArrayList\u003cInteger\u003e(Arrays.asList(1, 2, 3, 4));\t// 初始化值 添加元素：\narray.add(1);\t// List只能在末尾添加元素，在中间插入元素会导致额外的内存开销，可以选择使用LinkedList 指定位置的元素：\narray.get(0); 列表中是否存在某元素：\narray.contains(0); 删除列表元素：\narray.remove(0);\t// 删除array[0] array.remove(Integer.valueOf(0));\t// 删除元素0 列表大小：\narray.size(); 判断列表是否为空：\narray.isEmpty(); 清空列表：\narray.clear(); 升序排列：\narray.sort(Comparator.naturalOrder()); 降序排列：\narray.sort(Comparator.reverseOrder()); 修改值：\narray.set(int index, int value); 反转：\nCollections.reverse(array); HashMap 创建一个哈希映射：\nMap\u003cInteger, Integer\u003e map = new HashMap\u003cInteger, Integer\u003e(); 存储键值对（修改键值对）：\nmap.put(key, value); 获取 key 的内容：\nmap.get(key); 如果不知道有没有内容：\nmap.getOrDefault(key, default); // 如果存在key，返回key的值 // 如果不存在key，返回default map.put(key, map.getOrDefault(key, 0) + 1); 查询是否存在 key：\nmap.containsKey(key); 遍历键值对：\n// 遍历key for (Integer key : map.keySet()) { } // 遍历value for (Integer value : map.values()) { } 是否为空：\nmap.isEmpty(); 删除Key：\nmap.remove(key); 大小：\nmap.size(); 排序：\nMap\u003cInteger, Integer\u003e map = new HashMap\u003cInteger, Integer\u003e();\t// 创建一个哈希映射 List\u003cMap.Entry\u003cInteger, Integer\u003e\u003e mapList = new ArrayList\u003cMap.Entry\u003cInteger, Integer\u003e\u003e(map.entrySet());\t// 我们无法对HashMap排序，需要把HashMap转换为ArrayList再排序 Collections.sort(mapList, new Comparator\u003cMap.Entry\u003cInteger, Integer\u003e\u003e() { public int compare(Map.Entry\u003cInteger, Integer\u003e o1, Map.Entry\u003cInteger, Integer\u003e o2) { return (o2.getValue() - o1.getValue());\t// 按照值的大小，从大到小排序 } }); mapList.get(i).getKey();\t// 排序后第i个的键 mapList.get(i).getValue();\t// 排序后第i个的值 HashSet 创建哈希表：\nSet\u003cInteger\u003e set = new HashSet\u003cInteger\u003e(); 添加元素：\nset.add(); 判断元素是否存在：\nset.contains();\t// HashSet查找元素要优于ArrayList 删除元素：\nset.remove(); 清空：\nset.clear(); 遍历：\nfor (int temp : set) { ... } StringBuilder 创建 StringBuilder：\nStringBuilder sb = new StringBuilder(); 在末尾添加字符或字符串：\nsb.append(char); 在末尾删除字符：\nsb.deleteCharAt(sb.length() - 1); 长度：\nsb.length(); 转化为 String：\nsb.toString(); 取反：\nsb.reverse(); 插入：\nsb.insert(0, \"abcd\");\t// 在第0个元素插入\"abcd\" 清空：\nsb.setLength(0); 取字符：\nsb.charAt(i); 修改位置的字符：\nsb.setCharAt(i); Queue 创建queue:\nQueue\u003cInteger\u003e queue = new LinkedList\u003cInteger\u003e(); 加入元素：\nqueue.offer(1); 删除元素（先进先出）：\nqueue.poll(); 队首元素：\nqueue.peek(); 队列大小：\nqueue.size(); 是否为空：\nqueue.isEmpty(); 队列清空：\nqueue.clear(); Deque 创建Deque：\nDeque\u003cInteger\u003e deque = new ArrayDeque\u003cInteger\u003e(); 队尾添加元素：\ndeque.offerLast();\t// queue的用法 队首弹出元素：\ndeque.pollFirst();\t// queue的用法 取队首元素：\ndeque.peekFirst();\t// queue的用法 队首添加元素：\ndeque.offerFirst(); 队尾弹出元素：\ndeque.pollLast(); 取队尾元素：\ndeque.peekLast(); LinkedList 新建链表：\nLinkedList\u003cInteger\u003e link = new LinkedList\u003cInteger\u003e(); 头部插入：\nlink.addFirst(); 末尾插入：\nlink.addLast(); link.add(); 指定位置插入：\nlink.add(int index, int Ele); 清空：\nlink.clear(); 删除并返回第一个：\nlink.removeFirst(); 删除并返回最后一个：\nlink.removeLast(); 删除特定位置：\nlink.remove(int index); 删除特定元素：\nlink.remove(Object o); link.remove(Integer.valueOf(2)); 重设：\nlink.set(); 头部取值：\nlink.getFirst(); 尾部取值：\nlink.getLast(); 特定位置取值：\nlink.get(int index); 是否存在：\nlink.contains(int key); 遍历：\n// 不涉及元素增添或删除可以用for each for (String element : link) { } // 涉及到则需要使用迭代器 Iterator\u003cString\u003e iterator = link.iterator();\t// 初始化时指向哑节点 while (iterator.hasNext()) { String element = iterator.next(); } PriorityQueue 创建优先队列：\nPriorityQueue\u003cInteger\u003e heap = new PriorityQueue\u003cInteger\u003e(); // 如果不加Comparator默认为小根堆 // 即只有第一个元素是最小元素 插入元素：\nheap.offer(); 取堆顶：\nheap.peek(); 弹出堆顶：\nheap.poll(); 删除特定元素：\nheap.remove(); 堆大小：\nheap.size(); AtomicInteger 多线程中的integer，线程操作对其是原子性的，不会被其他线程打断。\n创建：\nAtomicInteger a = new AtomicInteger(0); 获取当前值：\nint value = a.get(); 设置值：\na.set(2); 先获取再设置：\nint oldValue = a.getAndSet(20); 先比较再设置：\nboolean updated = a.compareAndSet(20, 43); // 如果a == 20，则将a = 43，updated = true // 如果a != 20，则将a不更新，updated = false 加一，返回加一后的值：\nint incrementedValue = a.incrementAndGet(); 减一，返回减一后的值：\nint decrementedValue = a.decrementAndGet(); 互相转换 // int转String int i; String str = String.valueOf(i); // String转int String str; int i = Integer.parseInt(str); // char转int char ch; int i = ch - '0'; // int转char int i; char ch = (char) (i + '0'); // String转char[] String str; char[] ch = str.toCharArray(); // char[]转String char[] ch; String str = String.valueOf(ch); // char转String char ch = 'a'; String str = ch + \"\"; // ArrayList转Integer[] List\u003cInteger\u003e list; Integer[] array = list.toArray(new Integer[list.size()]); // Integer[]转ArrayList Integer[] array; List\u003cInteger\u003e list = Arrays.asList(array); 坑 Math.ceil：\ndouble Math.ceil(double a);\t// 原函数 Math.ceil(24 / 23);\t// 1.0 Math.ceil(22 / 23);\t// 0.0 Math.ceil((double) 24 / 23);\t// 2.0 (int) Math.ceil((double) 24 / 23);\t// 2 Math.pow:\nMath.pow(10, 9);\t// 如果想求次方必须要用pow函数，返回double 10 ^ 9;\t// 这里表示的是亦或而不是次方 二维数组：\nint[][] a = new int[][] {{1, 2}, {3, 4}}; int[] b = a[1];\t// b = [3, 4] b[1] = 100; // a = [[1, 2], [3, 100]] ",
   "wordCount" : "2133",
   "inLanguage": "zh",
-  "datePublished": "2022-05-05T17:28:17-04:00",
-  "dateModified": "2022-05-05T17:28:17-04:00",
+  "datePublished": "2024-05-10T22:28:17-04:00",
+  "dateModified": "2024-05-10T22:28:17-04:00",
   "author":{
     "@type": "Person",
-    "name": "Kyrie"
+    "name": ""
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://kyxie.github.io/zh/blog/tech/java/"
+    "@id": "https://ymz-1.github.io/zh/blog/tech/java/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Kunyang's Blog",
+    "name": "Yemz's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kyxie.github.io/White.png"
+      "url": "https://ymz-1.github.io/White.png"
     }
   }
 }
@@ -128,7 +128,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kyxie.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
+            <a href="https://ymz-1.github.io/zh/" accesskey="h" title="Home (Alt + H)">Home</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://kyxie.github.io/en/" title="English🇨🇦"
+                        <a href="https://ymz-1.github.io/en/" title="English🇨🇦"
                             aria-label="English🇨🇦">English🇨🇦</a>
                     </li>
                 </ul>
@@ -160,32 +160,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://kyxie.github.io/zh/about" title="关于">
+                <a href="https://ymz-1.github.io/zh/about" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/resume.pdf" title="简历">
+                <a href="https://ymz-1.github.io/zh/resume.pdf" title="简历">
                     <span>简历</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/blog" title="博客">
+                <a href="https://ymz-1.github.io/zh/blog" title="博客">
                     <span>博客</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/comment/comments" title="留言板">
+                <a href="https://ymz-1.github.io/zh/comment/comments" title="留言板">
                     <span>留言板</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/links" title="友链">
+                <a href="https://ymz-1.github.io/zh/links" title="友链">
                     <span>友链</span>
                 </a>
             </li>
             <li>
-                <a href="https://kyxie.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://ymz-1.github.io/zh/search" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
@@ -196,11 +196,11 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://kyxie.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://kyxie.github.io/zh/blog/tech/">技术 🔧</a></div>
+    <div class="breadcrumbs"><a href="https://ymz-1.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/">博客 📒</a>&nbsp;»&nbsp;<a href="https://ymz-1.github.io/zh/blog/tech/">技术 🔧</a></div>
     <h1 class="post-title">
       Java Cheat Sheet
     </h1>
-    <div class="post-meta"><span title='2022-05-05 17:28:17 -0400 EDT'>2022-05-05</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Kyrie
+    <div class="post-meta"><span title='2024-05-10 22:28:17 -0400 EDT'>2024-05-10</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;
 
 </div>
   </header> <aside id="toc-container" class="toc-container wide">
@@ -672,12 +672,12 @@
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="https://kyxie.github.io/zh/blog/tech/bash/">
+  <a class="prev" href="https://ymz-1.github.io/zh/blog/tech/bash/">
     <span class="title">« 上一页</span>
     <br>
     <span>Windows 11 打造个性化终端</span>
   </a>
-  <a class="next" href="https://kyxie.github.io/zh/blog/tech/cpp/">
+  <a class="next" href="https://ymz-1.github.io/zh/blog/tech/cpp/">
     <span class="title">下一页 »</span>
     <br>
     <span>Cpp Cheat Sheet</span>
@@ -697,7 +697,7 @@
     <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.10/dist/twikoo.all.min.js"></script>
     <script>
         twikoo.init({
-            envId: "https://twikoo-kyxie.vercel.app/",  
+            envId: "https://twikoo-ymz-1.vercel.app/",  
             el: "#tcomment",
             lang: 'en-US',
             region: '',  
@@ -709,7 +709,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://kyxie.github.io/zh/">Kunyang&#39;s Blog</a></span>
+    <span>&copy; 2024 <a href="https://ymz-1.github.io/zh/">Yemz&#39;s Blog</a></span>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
